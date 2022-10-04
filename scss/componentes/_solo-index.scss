@@ -1,0 +1,134 @@
+.localH {
+    grid-area: img-vid;
+    margin: 10px;
+    padding: 15px;
+    width: 50em;
+    
+}
+
+
+.div-nos {
+    margin: 2px;
+    padding: 5px;
+    background-color: $bg-color-seis;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: min-content;
+
+    & p {
+        grid-area: info-uno;
+        font-size: large;
+    }
+
+    & img {
+        font-size: small;
+        padding: 5px;
+        width: 15vw;
+    }
+
+    & main {
+        grid-area: info-dos;
+        padding: 5px;
+        font-size: large;
+        color: $txt-color-tres;
+    }
+}
+
+/* Especificamene esta es la parte principal de la pagina ya que aqui se econtraria el catalogo de la categoria de productos a la venta*/
+.secProductos {
+    margin: map-get($catprod , marg);
+    padding: map-get($catprod , padd);
+    gap: 40px;
+    display: map-get($catprod , display-f);
+    flex-direction: map-get($catprod , flex-drow);
+    justify-content: map-get($catprod , jus-cont-sa);
+    text-align: center;
+
+    a {
+        text-decoration: map-get($catprod , txt-d);
+        color: $txt-color-uno;
+
+    }
+
+    &:hover {
+        background: $bg-color-seis;
+
+    }
+
+
+    .divBazar {
+        @extend %valoresgral;
+
+        &:hover {
+            transform: map-get($catprod , trform);
+        }
+
+        .img-b-r {
+            width: map-get($catprod , img-width);
+            height: map-get($catprod , img--height);
+            border-radius: map-get($catprod , b-radius);
+        }
+
+        a {
+            text-decoration: map-get($catprod , txt-d);
+            color: $txt-color-dos;
+
+
+            &:hover {
+                background: $bg-color-tres;
+
+            }
+        }
+    }
+
+    .divDeco {
+        @extend %valoresgral;
+
+        &:hover {
+            transform: map-get($catprod , trform);
+        }
+
+        .img-b-r {
+            width: map-get($catprod , img-width);
+            height: map-get($catprod , img--height);
+            border-radius: map-get($catprod , b-radius);
+        }
+
+        a {
+            text-decoration: map-get($catprod , txt-d);
+            color: $txt-color-dos;
+
+
+            &:hover {
+                background: $bg-color-tres;
+
+            }
+        }
+    }
+
+    .divHogar {
+        @extend %valoresgral;
+
+        &:hover {
+            transform: map-get($catprod , trform);
+        }
+
+        .img-b-r {
+            width: map-get($catprod , img-width);
+            height: map-get($catprod , img--height);
+            border-radius: map-get($catprod , b-radius);
+        }
+
+        a {
+            text-decoration: map-get($catprod , txt-d);
+            color: $txt-color-dos;
+
+
+            &:hover {
+                background: $bg-color-tres;
+
+            }
+        }
+    }
+}
